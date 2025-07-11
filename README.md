@@ -45,20 +45,18 @@ Cloudilic Dragify is a cutting-edge AI automation platform that:
     <tr>
       <td>
         <ul>
+          <li>Python</li>
           <li>FastAPI</li>
-          <li>Python 3.11</li>
           <li>SQLAlchemy</li>
-          <li>Pydantic</li>
           <li>OAuth2 with JWT</li>
         </ul>
       </td>
       <td>
         <ul>
-          <li>React 18</li>
+          <li>React</li>
           <li>TypeScript</li>
           <li>TailwindCSS</li>
-          <li>Zustand (State)</li>
-          <li>Recharts</li>
+          <li>Zustand</li>
         </ul>
       </td>
       <td>
@@ -66,15 +64,12 @@ Cloudilic Dragify is a cutting-edge AI automation platform that:
           <li>LangChain</li>
           <li>HuggingFace Models</li>
           <li>PostgreSQL</li>
-          <li>Alembic Migrations</li>
         </ul>
       </td>
       <td>
         <ul>
-          <li>Docker & Docker Compose</li>
           <li>Vercel (Frontend)</li>
           <li>Render (Backend)</li>
-          <li>GitHub Actions</li>
         </ul>
       </td>
     </tr>
@@ -289,7 +284,7 @@ pytest tests/test_webhook.py
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-##  Acknowledgements
+## Acknowledgements
 
 - [FastAPI](https://fastapi.tiangolo.com/) for the high-performance API framework
 - [React](https://reactjs.org/) for the frontend UI library
