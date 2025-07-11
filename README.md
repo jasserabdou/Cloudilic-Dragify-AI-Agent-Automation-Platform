@@ -90,9 +90,9 @@ Cloudilic Dragify is a cutting-edge AI automation platform that:
 
 ### Prerequisites
 
-- Python 3.8 or higher
-- Node.js 16 or higher
-- PostgreSQL 13 or higher (or Docker for containerized setup)
+- Python 3.11 
+- Node.js 22.1 
+- PostgreSQL 17.5 
 
 ### Backend Setup
 
