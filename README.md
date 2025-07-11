@@ -12,10 +12,6 @@
 
 An intelligent AI-driven Agent system that automates lead capture and onboarding processes, transforming unstructured data into actionable business insights in real-time.
 
-<p align="center">
-  <img src="https://i.imgur.com/placeholder-image.jpg" alt="Cloudilic Dragify Dashboard" width="600"/>
-</p>
-
 ## ✨ Project Overview
 
 Cloudilic Dragify is a cutting-edge AI automation platform that:
@@ -36,14 +32,6 @@ Cloudilic Dragify is a cutting-edge AI automation platform that:
 - **Dynamic Configuration**: Adjust business logic and AI parameters through the intuitive UI
 - **Modern UI Experience**: Clean, responsive design with dark mode support for enhanced readability
 
-## 🆕 Recent Updates
-
-- 🌙 **Dark Mode UI**: Enhanced visual experience with reduced eye strain
-- 🛡️ **Improved Error Handling**: Robust database connection and error recovery
-- 🔄 **Auto Database Creation**: Simplified setup with automatic database initialization
-- 🧪 **Enhanced Testing**: Improved test coverage and database reset functionality
-- 🎨 **Accessibility Improvements**: Better text contrast and UI elements
-
 ## 🛠️ Tech Stack
 
 <div align="center">
@@ -58,7 +46,7 @@ Cloudilic Dragify is a cutting-edge AI automation platform that:
       <td>
         <ul>
           <li>FastAPI</li>
-          <li>Python 3.8+</li>
+          <li>Python 3.11</li>
           <li>SQLAlchemy</li>
           <li>Pydantic</li>
           <li>OAuth2 with JWT</li>
@@ -116,20 +104,13 @@ Cloudilic Dragify is a cutting-edge AI automation platform that:
 <details>
 <summary>🔍 Click to expand backend setup instructions</summary>
 
-1. **Clone the repository**
-
-```bash
-git clone https://github.com/jasserabdou/Cloudilic-Dragify-AI-Agent-Automation-Platform.git
-cd Cloudilic-Dragify-AI-Agent-Automation-Platform
-```
-
-2. **Navigate to the backend directory**
+1. **Navigate to the backend directory**
 
 ```bash
 cd backend
 ```
 
-3. **Create and activate a virtual environment**
+2. **Create and activate a virtual environment**
 
 ```bash
 # Windows
@@ -141,13 +122,13 @@ python -m venv venv
 source venv/bin/activate
 ```
 
-4. **Install dependencies**
+3. **Install dependencies**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-5. **Configure environment variables**
+4. **Configure environment variables**
 
 ```bash
 # Create a .env file based on the provided .env.example
@@ -155,20 +136,20 @@ cp .env.example .env
 # Edit the .env file with your database credentials and other settings
 ```
 
-6. **Set up PostgreSQL database**
+5. **Set up PostgreSQL database**
 
 ```bash
 # Create a database named 'cloudilic'
 # Update the DATABASE_URL in .env with your credentials
 ```
 
-7. **Initialize the database**
+6. **Initialize the database**
 
 ```bash
 python create_database.py
 ```
 
-8. **Start the backend server**
+7. **Start the backend server**
 
 ```bash
 uvicorn main:app --reload
@@ -202,33 +183,6 @@ npm run dev
 ```
 
 The frontend will be available at `http://localhost:5173`
-
-</details>
-
-### Docker Setup (Alternative)
-
-<details>
-<summary>🔍 Click to expand Docker setup instructions</summary>
-
-1. **Ensure Docker and Docker Compose are installed**
-
-2. **Start the complete application stack**
-
-```bash
-docker-compose up -d
-```
-
-This will start:
-
-- PostgreSQL database on port 5432
-- Backend FastAPI server on port 8000
-- Frontend with Nginx on port 80
-
-3. **Access the application**
-
-Frontend: `http://localhost`  
-API: `http://localhost:8000`  
-API Documentation: `http://localhost:8000/docs`
 
 </details>
 
@@ -294,10 +248,6 @@ The platform provides a comprehensive set of RESTful APIs:
 
 ## 🔄 How It Works
 
-<div align="center">
-  <img src="https://i.imgur.com/placeholder-workflow.jpg" alt="Cloudilic Dragify Workflow" width="800"/>
-</div>
-
 1. **Event Ingestion**: External systems send webhook events to the platform API
 2. **Event Processing**: Incoming messages are logged and validated
 3. **AI Analysis**: LangChain with HuggingFace models extracts structured lead data
@@ -331,88 +281,15 @@ pytest --cov=app
 ```bash
 # Run just the webhook tests
 pytest tests/test_webhook.py
-
-# Run just the authentication tests
-pytest tests/test_auth.py
-
-# Run integration tests
-pytest tests/integration/
-```
-
-### Troubleshooting Tests
-
-If you encounter database-related test failures, reset the test database:
-
-```bash
-cd backend
-python reset_database.py --test
 ```
 
 </details>
-
-## 🔧 Troubleshooting
-
-<details>
-<summary>🔍 Common Issues and Solutions</summary>
-
-### PostgreSQL Authentication Error
-
-If you encounter an error like:
-
-```
-FATAL: password authentication failed for user "postgres"
-```
-
-You need to:
-
-1. Edit the `.env` file in the backend directory and update the PostgreSQL credentials
-2. OR use the Docker Compose setup which comes with a preconfigured PostgreSQL instance
-3. OR update the credentials in `app/core/config.py`
-
-### Database Reset
-
-To reset the database and start fresh:
-
-```bash
-cd backend
-python reset_database.py
-```
-
-This will drop the existing database, recreate it, and set up all the necessary tables.
-
-### Frontend Connection Issues
-
-If the frontend cannot connect to the backend:
-
-1. Check that the backend is running on the expected port (default: 8000)
-2. Verify that CORS is properly configured in the backend
-3. Check the API URL in the frontend configuration
-
-</details>
-
-## 📚 Documentation
-
-For detailed documentation:
-
-- **API Documentation**: Available at `/docs` when running the backend server
-- **Frontend Components**: Documentation in the `/frontend/docs` directory
-- **Database Schema**: See `backend/app/models/db_models.py` for table definitions
 
 ## 📝 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 👥 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 🙏 Acknowledgements
+##  Acknowledgements
 
 - [FastAPI](https://fastapi.tiangolo.com/) for the high-performance API framework
 - [React](https://reactjs.org/) for the frontend UI library
@@ -426,7 +303,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
   
 Developed by [Jasser Abdou](https://github.com/jasserabdou) for Cloudilic
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](www.linkedin.com/in/jasser-abdelfattah-67a420276)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/jasser-abdelfattah-67a420276)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github)](https://github.com/jasserabdou)
 
 </div>
