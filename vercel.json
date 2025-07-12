@@ -4,7 +4,7 @@
     {
       "src": "frontend/package.json",
       "use": "@vercel/static-build",
-      "options": {
+      "config": {
         "installCommand": "cd frontend && npm install",
         "buildCommand": "cd frontend && npm run build",
         "outputDirectory": "frontend/dist"
@@ -13,7 +13,7 @@
     {
       "src": "backend/main.py",
       "use": "@vercel/python",
-      "options": {
+      "config": {
         "installCommand": "pip install -r backend/requirements.txt"
       }
     }
