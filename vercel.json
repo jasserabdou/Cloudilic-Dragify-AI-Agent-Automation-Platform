@@ -9,23 +9,12 @@
         "buildCommand": "npm run build",
         "outputDirectory": "dist"
       }
-    },
-    {
-      "src": "backend/main.py",
-      "use": "@vercel/python",
-      "config": {
-        "installCommand": "pip install -r backend/requirements.txt"
-      }
     }
   ],
   "rewrites": [
     {
-      "source": "/api/(.*)",
-      "destination": "/backend/main.py"
-    },
-    {
       "source": "/(.*)",
-      "destination": "/frontend/index.html"
+      "destination": "/index.html"
     }
   ]
 }
