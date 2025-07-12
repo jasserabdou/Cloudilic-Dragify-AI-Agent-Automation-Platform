@@ -69,7 +69,6 @@ Cloudilic Dragify is a cutting-edge AI automation platform that:
       <td>
         <ul>
           <li>Vercel (Frontend)</li>
-          <li>Render (Backend)</li>
         </ul>
       </td>
     </tr>
